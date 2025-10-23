@@ -1,0 +1,19 @@
+{
+  "rooms": [
+    {
+      "id": "r-101",
+      "name": "Аудитория 101",
+      "capacity": 30,
+      "features": ["projector", "whiteboard"]
+    }
+  ],
+  "assets": [
+    {
+      "id": "a-proj-1",
+      "name": "Проектор Epson",
+      "inventoryCode": "PRJ-001",
+      "status": "available"
+    }
+  ],
+  "bookings": []
+}
