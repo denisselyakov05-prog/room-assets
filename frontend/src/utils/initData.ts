@@ -176,43 +176,72 @@ export const initialData: AppData = {
   bookings: [
     {
       id: 'b-1',
+      title: 'Совещание отдела разработки',   // title вместо purpose
+      resourceType: 'room',                  // новое обязательное поле
+      resourceId: 'r-101',                   // новое обязательное поле
+      start: '2024-01-20T10:00:00',          // start вместо startTime
+      end: '2024-01-20T12:00:00',            // end вместо endTime
+      notes: '',                              // необязательное
+      bookedBy: 'Иван Петров',
+      status: 'active',
+
+      // старые поля для совместимости фронта
       roomId: 'r-101',
       assetIds: ['a-1', 'a-2'],
       startTime: '2024-01-20T10:00:00',
       endTime: '2024-01-20T12:00:00',
-      purpose: 'Совещание отдела разработки',
-      bookedBy: 'Иван Петров',
-      status: 'active'
+      purpose: 'Совещание отдела разработки'
     },
     {
       id: 'b-2',
+      title: 'Презентация для клиентов',
+      resourceType: 'room',
+      resourceId: 'r-301',
+      start: '2024-01-21T14:00:00',
+      end: '2024-01-21T16:00:00',
+      notes: '',
+      bookedBy: 'Мария Сидорова',
+      status: 'active',
+
       roomId: 'r-301',
       assetIds: ['a-1', 'a-3', 'a-6'],
       startTime: '2024-01-21T14:00:00',
       endTime: '2024-01-21T16:00:00',
-      purpose: 'Презентация для клиентов',
-      bookedBy: 'Мария Сидорова',
-      status: 'active'
+      purpose: 'Презентация для клиентов'
     },
     {
       id: 'b-3',
+      title: 'Корпоративное обучение',
+      resourceType: 'room',
+      resourceId: 'r-205',
+      start: '2024-01-19T09:00:00',
+      end: '2024-01-19T11:00:00',
+      notes: '',
+      bookedBy: 'Алексей Козлов',
+      status: 'completed',
+
       roomId: 'r-205',
       assetIds: ['a-1', 'a-3', 'a-6', 'a-7'],
       startTime: '2024-01-19T09:00:00',
       endTime: '2024-01-19T11:00:00',
-      purpose: 'Корпоративное обучение',
-      bookedBy: 'Алексей Козлов',
-      status: 'completed'
+      purpose: 'Корпоративное обучение'
     },
     {
       id: 'b-4',
+      title: 'Языковая практика',
+      resourceType: 'room',
+      resourceId: 'r-105',
+      start: '2024-01-22T13:00:00',
+      end: '2024-01-22T15:00:00',
+      notes: '',
+      bookedBy: 'Ольга Новикова',
+      status: 'active',
+
       roomId: 'r-105',
       assetIds: ['a-2'],
       startTime: '2024-01-22T13:00:00',
       endTime: '2024-01-22T15:00:00',
-      purpose: 'Языковая практика',
-      bookedBy: 'Ольга Новикова',
-      status: 'active'
+      purpose: 'Языковая практика'
     }
   ]
 };

@@ -1,6 +1,7 @@
 export interface Asset {
   id: string;
   name: string;
+  inventoryCode?: string;
   type: 'projector' | 'computer' | 'audio' | 'furniture' | 'other';
   status: 'available' | 'in-use' | 'maintenance';
   quantity: number;
@@ -21,14 +22,23 @@ export interface Room {
 
 export interface Booking {
   id: string;
-  roomId: string;
-  assetIds: string[];
-  startTime: string;
-  endTime: string;
-  purpose: string;
+  title: string;
+  resourceType: 'room' | 'asset';
+  resourceId: string;
+  start: string;
+  end: string;
+  notes?: string;
   bookedBy: string;
   status: 'active' | 'cancelled' | 'completed';
+
+  // старые поля для совместимости с фронтом
+  roomId?: string;
+  assetIds?: string[];
+  startTime?: string;
+  endTime?: string;
+  purpose?: string;
 }
+
 
 export interface AppData {
   rooms: Room[];

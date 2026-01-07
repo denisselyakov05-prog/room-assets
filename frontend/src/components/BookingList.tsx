@@ -48,11 +48,10 @@ export const BookingList: React.FC<BookingListProps> = ({ bookings, onEdit, onDe
               </div>
               
               <div className="booking-details">
-                <p><strong>🏢 Аудитория:</strong> {getRoomName(booking.roomId)}</p>
+                <p><strong>🏢 Ресурс:</strong> {booking.resourceType === 'room' ? getRoomName(booking.resourceId) : booking.resourceType === 'asset' ? 'Оборудование' : '—'}</p>
                 <p><strong>👤 Забронировал:</strong> {booking.bookedBy}</p>
-                <p><strong>🕐 Начало:</strong> {formatDate(booking.startTime)}</p>
-                <p><strong>🕐 Окончание:</strong> {formatDate(booking.endTime)}</p>
-                <p><strong>📦 Оборудование:</strong> {booking.assetIds.length} шт.</p>
+                <p><strong>🕐 Начало:</strong> {formatDate(booking.start)}</p>
+                <p><strong>🕐 Окончание:</strong> {formatDate(booking.end)}</p>
               </div>
               
               <div className="booking-actions">

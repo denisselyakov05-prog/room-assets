@@ -85,8 +85,11 @@ export const BookingForm: React.FC<BookingFormProps> = ({
         title: formData.title,
         start: new Date(formData.start).toISOString(),
         end: new Date(formData.end).toISOString(),
-        notes: formData.notes
+        notes: formData.notes,
+        bookedBy: 'user-1',
+        status: 'active'
       };
+
 
       onSave(bookingData);
     }
