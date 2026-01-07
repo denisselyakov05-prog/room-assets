@@ -8,9 +8,6 @@ async function enableMocking() {
     const { worker } = await import('./mocks/browser')
     return worker.start({
       onUnhandledRequest: 'bypass',
-      serviceWorker: {
-        url: '/mockServiceWorker.js',
-      },
     })
   }
 }
