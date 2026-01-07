@@ -370,6 +370,10 @@ export async function buildApp() {
     }
   )
 
+  app.get('/', async (_req, reply) => {
+    return reply.redirect('/openapi.json'); 
+  });
+
   // Служебный маршрут: возвращает OpenAPI-спецификацию.
   app.get(
     '/openapi.json',

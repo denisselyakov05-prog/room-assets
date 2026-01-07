@@ -306,6 +306,9 @@ export async function buildApp() {
             });
         }
     });
+    app.get('/', async (_req, reply) => {
+        return reply.redirect('/openapi.json');
+    });
     // Служебный маршрут: возвращает OpenAPI-спецификацию.
     app.get('/openapi.json', {
         schema: { hide: true, tags: ['Internal'] } // Скрыт из списка, но доступен для клиентов/тестов
