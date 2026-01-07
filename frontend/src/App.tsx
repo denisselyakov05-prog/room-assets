@@ -13,7 +13,7 @@ type SortBy = 'name' | 'capacity';
 type AssetTypeFilter = 'all' | 'projector' | 'computer' | 'furniture' | 'audio' | 'other';
 type AssetStatusFilter = 'all' | 'available' | 'in-use' | 'maintenance';
 
-const API_URL = import.meta.env.DEV ? '' : 'https://room-assets-r3dr.onrender.com'; // prod → Render
+const API_URL = import.meta.env.DEV ? '' : 'https://room-assets-r3dr.onrender.com';
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
   useEffect(() => {
     console.log('🔍 Начинаем тестовый запрос к /api/rooms...');
     
-    fetch('${API_URL}/api/rooms')
+    fetch(`${API_URL}/api/rooms`)
       .then(response => {
         console.log('📡 Получен ответ, статус:', response.status);
         console.log('📡 Заголовки:', Object.fromEntries(response.headers.entries()));
